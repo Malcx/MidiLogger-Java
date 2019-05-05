@@ -1,13 +1,18 @@
+# What MIDI instrument to play and record as. 1 = General piano
 instrumentNumber=1
 
+# Relative output path
 outputPath=myHistory
+
+# Velocity Gain - incase you need to increase the output volume accross the board
 velocityGain=1
 
 # Channel to listen to - on Roland PC200 (maybe others) these start at 1, 
-# in Java they start at 0
+# in Java they seem to start at 0
 channelNumber=0
 
-# Input device may include spaces at the end of the line
+# Input device may require spaces at the end of the line.
+# This is the case for my particular MIDI-USB cable that is named "USB2.0-MIDI  "
 # use <java MidiLogger l> to list available devices
 inputDevice =USB2.0-MIDI  
  
