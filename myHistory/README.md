@@ -1,0 +1,1 @@
+Output will all be saved into this folder (configure via config.props)
