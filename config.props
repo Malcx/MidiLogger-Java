@@ -1,0 +1,13 @@
+instrumentNumber=1
+
+outputPath=myHistory
+velocityGain=1
+
+# Channel to listen to - on Roland PC200 (maybe others) these start at 1, 
+# in Java they start at 0
+channelNumber=0
+
+# Input device may include spaces at the end of the line
+# use <java MidiLogger l> to list available devices
+inputDevice =USB2.0-MIDI  
+ 
