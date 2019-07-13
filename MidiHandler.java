@@ -207,16 +207,18 @@ public class MidiInputReceiver implements Receiver {
 				
 			int when = (int)((System.currentTimeMillis() - this.timeCode) / 24 * 4);
 	
+				System.out.println(((ShortMessage)msg).getData1());
+
 			if(((ShortMessage)msg).getData2() == 0){
 				mChannels[0].noteOff( ((ShortMessage)msg).getData1());
 				MidiEvent me = new MidiEvent(((ShortMessage)msg),(long)when);
 				track.add(me);
 			}
-			else if( (int) ((ShortMessage)msg).getData1() == 123)
-			{
+			//else if( (int) ((ShortMessage)msg).getData1() == 123 || (int) ((ShortMessage)msg).getData1() == 86)
+			//{
 			// do nothing
 			// Sometimes on a Roland PC-200 MK2 it send the "stop all notes" message every half second or so.
-			}
+			//}
 			else{
 			
 				int vel = (int)(((ShortMessage)msg).getData2() * Double.parseDouble(this.props.getProperty("velocityGain")));
